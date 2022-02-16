@@ -1,0 +1,32 @@
+{
+  "Import Css Module Style": {
+    "prefix": "imcm",
+    "body": ["import styles from '${1:./}${2:index}.css';"],
+    "description": "Import Css Module Style"
+  },
+  "Import Less Module Style": {
+    "prefix": "imlm",
+    "body": ["import styles from '${1:./}${2:index}.less';"],
+    "description": "Import Less Module Style"
+  },
+  "Import Classnames ": {
+    "prefix": "imcls",
+    "body": ["import cls from 'classnames';"],
+    "description": "Import Less Module Style"
+  },
+  "Classnames Style Module": {
+    "prefix": "clsm",
+    "body": ["{ cls(styles.${1:item}) }"],
+    "description": "Import Less Module Style"
+  },
+  "Classnames Style Module With Condition": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact,jsx-attr",
+    "prefix": "clsmc",
+    "body": [
+      "{ cls(styles.${1:item}, {",
+      "  [styles.${1/(.*)/${1}/}Active]: ${2:index} === ${3:1}",
+      "})}"
+    ],
+    "description": "Import Less Module Style"
+  }
+}

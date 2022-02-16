@@ -1,4 +1,35 @@
 {
+  "Import Css Module Style": {
+    "prefix": "imcm",
+    "body": ["import styles from '${1:./}${2:index}.css';"],
+    "description": "Import Css Module Style"
+  },
+  "Import Less Module Style": {
+    "prefix": "imlm",
+    "body": ["import styles from '${1:./}${2:index}.less';"],
+    "description": "Import Less Module Style"
+  },
+  "Import Classnames ": {
+    "prefix": "imcls",
+    "body": ["import cls from 'classnames';"],
+    "description": "Import Less Module Style"
+  },
+  "Classnames Style Module": {
+    "prefix": "clsm",
+    "body": ["{ cls(styles.${1:item}) }"],
+    "description": "Import Less Module Style"
+  },
+  "Classnames Style Module With Condition": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact,jsx-attr",
+    "prefix": "clsmc",
+    "body": [
+      "{ cls(styles.${1:item}, {",
+      "  [styles.${1/(.*)/${1}/}Active]: ${2:index} === ${3:1}",
+      "})}"
+    ],
+    "description": "Import Less Module Style"
+  }
+,
   "Eslint Disable Line": {
     "prefix": "edl",
     "body": "// eslint-disable-line",
@@ -6,7 +37,9 @@
   },
   "Import Statement": {
     "prefix": "imst",
-    "body": ["import { ${2:moduleName} } from '${1:module}'$0"],
+    "body": [
+      "import { ${2:moduleName} } from '${1:module}'$0"
+    ],
     "description": "Import Statement"
   },
   "Import": {
@@ -49,37 +82,72 @@
   },
   "Export Default Function": {
     "prefix": "edf",
-    "body": ["export default (${1:params}) => {", "  $0", "}", ""],
+    "body": [
+      "export default (${1:params}) => {",
+      "  $0",
+      "}",
+      ""
+    ],
     "description": "Export default function in ES7 syntax"
   },
   "Method": {
     "prefix": "met",
-    "body": ["${1:methodName} = (${2:params}) => {", "  ${0}", "}", ""],
+    "body": [
+      "${1:methodName} = (${2:params}) => {",
+      "  ${0}",
+      "}",
+      ""
+    ],
     "description": "Creates a method inside a class in ES7 syntax"
   },
   "For Each": {
     "prefix": "fre",
-    "body": ["${1:array}.forEach(${2:currentItem} => {", "  ${0}", "})", ""],
+    "body": [
+      "${1:array}.forEach(${2:currentItem} => {",
+      "  ${0}",
+      "})",
+      ""
+    ],
     "description": "Creates a forEach statement in ES7 syntax"
   },
   "For Of": {
     "prefix": "fof",
-    "body": ["for(let ${1:item} of ${2:object}) {", "  ${0}", "}", ""],
+    "body": [
+      "for(let ${1:item} of ${2:object}) {",
+      "  ${0}",
+      "}",
+      ""
+    ],
     "description": "Iterating over property names of iterable objects"
   },
   "For In": {
     "prefix": "fin",
-    "body": ["for(let ${1:item} in ${2:object}) {", "  ${0}", "}", ""],
+    "body": [
+      "for(let ${1:item} in ${2:object}) {",
+      "  ${0}",
+      "}",
+      ""
+    ],
     "description": "Iterating over property values of iterable objects"
   },
   "Anonymous Function": {
     "prefix": "anfn",
-    "body": ["(${1:params}) => {", "  ${2}", "}", ""],
+    "body": [
+      "(${1:params}) => {",
+      "  ${2}",
+      "}",
+      ""
+    ],
     "description": "Creates an anonymous function in ES7 syntax"
   },
   "Named Function": {
     "prefix": "nfn",
-    "body": ["const ${1:name} = (${2:params}) => {", "  ${3}", "}", ""],
+    "body": [
+      "const ${1:name} = (${2:params}) => {",
+      "  ${3}",
+      "}",
+      ""
+    ],
     "description": "Creates a named function in ES7 syntax"
   },
   "Destructing Object": {
@@ -94,17 +162,32 @@
   },
   "Set Interval": {
     "prefix": "sti",
-    "body": ["setInterval(() => {", "  ${2}", "}, ${0:intervalInms})", ""],
+    "body": [
+      "setInterval(() => {",
+      "  ${2}",
+      "}, ${0:intervalInms})",
+      ""
+    ],
     "description": "Executes the given function at specified intervals in ES7 syntax"
   },
   "Set TimeOut": {
     "prefix": "sto",
-    "body": ["setTimeout(() => {", "  ${2}", "}, ${1:delayInms})", ""],
+    "body": [
+      "setTimeout(() => {",
+      "  ${2}",
+      "}, ${1:delayInms})",
+      ""
+    ],
     "description": "Executes the given function after the specified delay in ES7 syntax"
   },
   "Promise": {
     "prefix": "prom",
-    "body": ["return new Promise((resolve, reject) => {", "  ${1}", "})", ""],
+    "body": [
+      "return new Promise((resolve, reject) => {",
+      "  ${1}",
+      "})",
+      ""
+    ],
     "description": "Creates and returns a new Promise in the standard ES7 syntax"
   },
   "Console Assert": {
@@ -164,7 +247,11 @@
   },
   "Comment Block": {
     "prefix": "cm",
-    "body": ["/**", " * ${1}", " */"]
+    "body": [
+      "/**",
+      " * ${1}",
+      " */"
+    ]
   },
   "Comment Big Block": {
     "prefix": "cmmb",
@@ -179,7 +266,8 @@
   "Comment Big Line": {
     "prefix": "cbl",
     "body": "// ============================================================"
-  },
+  }
+,
   "GraphQL For Component": {
     "prefix": "graphql",
     "body": ["import { compose, graphql } from 'react-apollo'", ""]
@@ -191,7 +279,8 @@
       "  graphql(${1:queryOrMutation}, { name: ${2:name} }),",
       ")(${3:ComponentName})"
     ]
-  },
+  }
+,
   "HOC With Redux": {
     "prefix": "hocredux",
     "body": [
@@ -236,7 +325,8 @@
       "}",
       ""
     ]
-  },
+  }
+,
   "useState": {
     "prefix": "useState",
     "body": [
@@ -252,10 +342,11 @@
     "prefix": "useEffect",
     "body": [
       "useEffect(() => {",
+      "  ",
       "  return () => {",
-      "    ${1:effect}",
+      "    ${2}",
       "  };",
-      "}, [${2:input}])"
+      "}, [${1:input}])"
     ],
     "description": [
       "Accepts a function that contains imperative, possibly effectful code.\n",
@@ -344,7 +435,8 @@
     "prefix": "useDebugValue",
     "body": ["useDebugValue(${1:value})"],
     "description": "Can be used to display a label for custom hooks in React DevTools."
-  },
+  }
+,
   "Axios API": {
     "prefix": "api",
     "body": [
@@ -473,10 +565,13 @@
       "export default store;"
     ],
     "description": "Create Store index.js file"
-  },
+  }
+,
   "Import PropTypes": {
     "prefix": "impt",
-    "body": ["import PropTypes from 'prop-types'"],
+    "body": [
+      "import PropTypes from 'prop-types'"
+    ],
     "description": "Import PropTypes"
   },
   "Prop Type Array": {
@@ -581,12 +676,20 @@
   },
   "Prop Type One Of Type": {
     "prefix": "ptet",
-    "body": ["PropTypes.oneOfType([", "  $0", "]),"],
+    "body": [
+      "PropTypes.oneOfType([",
+      "  $0",
+      "]),"
+    ],
     "description": "An object that could be one of many types"
   },
   "Prop Type One Of Type Required": {
     "prefix": "ptetr",
-    "body": ["PropTypes.oneOfType([", "  $0", "]).isRequired,"],
+    "body": [
+      "PropTypes.oneOfType([",
+      "  $0",
+      "]).isRequired,"
+    ],
     "description": "An object that could be one of many types required"
   },
   "Prop Type Array Of": {
@@ -611,18 +714,32 @@
   },
   "Prop Type Shape": {
     "prefix": "ptsh",
-    "body": ["PropTypes.shape({", "  $0", "}),"],
+    "body": [
+      "PropTypes.shape({",
+      "  $0",
+      "}),"
+    ],
     "description": "An object taking on a particular shape"
   },
   "Prop Type Shape Required": {
     "prefix": "ptshr",
-    "body": ["PropTypes.shape({", "  $0", "}).isRequired,"],
+    "body": [
+      "PropTypes.shape({",
+      "  $0",
+      "}).isRequired,"
+    ],
     "description": "An object taking on a particular shape required"
   },
   "Static Prop Types": {
     "prefix": "ptypes",
-    "body": ["static propTypes = {", "$0", "}", ""]
-  },
+    "body": [
+      "static propTypes = {",
+      "$0",
+      "}",
+      ""
+    ]
+  }
+,
   "React Native Component": {
     "prefix": "rnc",
     "body": [
@@ -718,7 +835,8 @@
   "React Native Style": {
     "prefix": "rnstyle",
     "body": "const styles = StyleSheet.create({})"
-  },
+  }
+,
   "Import React": {
     "prefix": "imr",
     "body": ["import React from 'react'", ""]
@@ -831,7 +949,7 @@
     "body": [
       "import React from 'react';",
       "",
-      "export default function ${1:componentName}() {",
+      "export default function ${TM_FILENAME/(.*)\\..+$/${1}/}() {",
       "  return (",
       "    <>",
       "    $0",
@@ -1112,7 +1230,8 @@
   "Component State": {
     "prefix": "state",
     "body": "this.state.$0"
-  },
+  }
+,
   "Reactotron Config React": {
     "prefix": "tron-r",
     "body": [
@@ -1193,19 +1312,29 @@
   },
   "Reactotron Console Log": {
     "prefix": "ctl",
-    "body": ["console.tron.log('$1');", ""],
+    "body": [
+      "console.tron.log('$1');",
+      ""
+    ],
     "description": "Useful and Fast way to add a console.tron.log and continue your proccess"
   },
   "Reactotron Console Warn": {
     "prefix": "ctw",
-    "body": ["console.tron.warn('$1');", ""],
+    "body": [
+      "console.tron.warn('$1');",
+      ""
+    ],
     "description": "Useful and Fast way to add a console.tron.warn and continue your proccess"
   },
   "Reactotron Console Error": {
     "prefix": "cte",
-    "body": ["console.tron.error('$1');", ""],
+    "body": [
+      "console.tron.error('$1');",
+      ""
+    ],
     "description": "Useful and Fast way to add a console.tron.error and continue your proccess"
-  },
+  }
+,
   "Import Redux Statement": {
     "prefix": "redux",
     "body": ["import { connect } from 'react-redux'", ""]
@@ -1324,6 +1453,7 @@
       ""
     ]
   },
+
   "Redux useDispatch": {
     "prefix": "useDispatch",
     "body": [
@@ -1343,8 +1473,15 @@
 
   "Redux Dispatch Action": {
     "prefix": "rxdaction",
-    "body": ["({", "  type: ${1:type},", "  payload: ${2:payload}", "})", ""]
-  },
+    "body": [
+      "dispatch({",
+      "  type: ${1:type},",
+      "  payload: ${2:payload}",
+      "})",
+      ""
+    ]
+  }
+,
   "React Router Import": {
     "prefix": "imrr",
     "body": [
@@ -1364,7 +1501,11 @@
   },
   "React Router Router": {
     "prefix": "router",
-    "body": ["<Router>", "\t${0}", "</Router>"]
+    "body": [
+      "<Router>",
+      "\t${0}",
+      "</Router>"
+    ]
   },
   "React Router Route": {
     "prefix": "route",
@@ -1373,7 +1514,8 @@
   "React Router NavLink": {
     "prefix": "navlink",
     "body": "<NavLink to={${1:path}}>{$anchorText}</NavLink>\n"
-  },
+  }
+,
   "Styled Components File for React": {
     "prefix": "styled-r",
     "body": [
@@ -1402,7 +1544,8 @@
     "prefix": "stc",
     "body": ["export const $1 = styled.$2`", "  $3", "`", ""],
     "description": "Create Styled Component"
-  },
+  }
+,
   "Describe Block": {
     "prefix": "desc",
     "body": ["describe('$1', () => {", "  $0", "})", ""],

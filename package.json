@@ -45,6 +45,14 @@
       {
         "language": "typescriptreact",
         "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "jsx-attr",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "jsx",
+        "path": "./snippets/snippets.json"
       }
     ]
   },
@@ -52,6 +60,7 @@
     "json-concat": "^0.0.1"
   },
   "scripts": {
+    "build": " npm run concat & vsce package",
     "concat": "node_modules\\.bin\\json-concat snippets/types/ snippets/snippets.json"
   }
 }

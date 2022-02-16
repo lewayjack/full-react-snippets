@@ -14,10 +14,11 @@
     "prefix": "useEffect",
     "body": [
       "useEffect(() => {",
+      "  ",
       "  return () => {",
-      "    ${1:effect}",
+      "    ${2}",
       "  };",
-      "}, [${2:input}])"
+      "}, [${1:input}])"
     ],
     "description": [
       "Accepts a function that contains imperative, possibly effectful code.\n",

@@ -6,9 +6,7 @@
   },
   "Import Statement": {
     "prefix": "imst",
-    "body": [
-      "import { ${2:moduleName} } from '${1:module}'$0"
-    ],
+    "body": ["import { ${2:moduleName} } from '${1:module}'$0"],
     "description": "Import Statement"
   },
   "Import": {
@@ -51,72 +49,37 @@
   },
   "Export Default Function": {
     "prefix": "edf",
-    "body": [
-      "export default (${1:params}) => {",
-      "  $0",
-      "}",
-      ""
-    ],
+    "body": ["export default (${1:params}) => {", "  $0", "}", ""],
     "description": "Export default function in ES7 syntax"
   },
   "Method": {
     "prefix": "met",
-    "body": [
-      "${1:methodName} = (${2:params}) => {",
-      "  ${0}",
-      "}",
-      ""
-    ],
+    "body": ["${1:methodName} = (${2:params}) => {", "  ${0}", "}", ""],
     "description": "Creates a method inside a class in ES7 syntax"
   },
   "For Each": {
     "prefix": "fre",
-    "body": [
-      "${1:array}.forEach(${2:currentItem} => {",
-      "  ${0}",
-      "})",
-      ""
-    ],
+    "body": ["${1:array}.forEach(${2:currentItem} => {", "  ${0}", "})", ""],
     "description": "Creates a forEach statement in ES7 syntax"
   },
   "For Of": {
     "prefix": "fof",
-    "body": [
-      "for(let ${1:item} of ${2:object}) {",
-      "  ${0}",
-      "}",
-      ""
-    ],
+    "body": ["for(let ${1:item} of ${2:object}) {", "  ${0}", "}", ""],
     "description": "Iterating over property names of iterable objects"
   },
   "For In": {
     "prefix": "fin",
-    "body": [
-      "for(let ${1:item} in ${2:object}) {",
-      "  ${0}",
-      "}",
-      ""
-    ],
+    "body": ["for(let ${1:item} in ${2:object}) {", "  ${0}", "}", ""],
     "description": "Iterating over property values of iterable objects"
   },
   "Anonymous Function": {
     "prefix": "anfn",
-    "body": [
-      "(${1:params}) => {",
-      "  ${2}",
-      "}",
-      ""
-    ],
+    "body": ["(${1:params}) => {", "  ${2}", "}", ""],
     "description": "Creates an anonymous function in ES7 syntax"
   },
   "Named Function": {
     "prefix": "nfn",
-    "body": [
-      "const ${1:name} = (${2:params}) => {",
-      "  ${3}",
-      "}",
-      ""
-    ],
+    "body": ["const ${1:name} = (${2:params}) => {", "  ${3}", "}", ""],
     "description": "Creates a named function in ES7 syntax"
   },
   "Destructing Object": {
@@ -131,32 +94,17 @@
   },
   "Set Interval": {
     "prefix": "sti",
-    "body": [
-      "setInterval(() => {",
-      "  ${2}",
-      "}, ${0:intervalInms})",
-      ""
-    ],
+    "body": ["setInterval(() => {", "  ${2}", "}, ${0:intervalInms})", ""],
     "description": "Executes the given function at specified intervals in ES7 syntax"
   },
   "Set TimeOut": {
     "prefix": "sto",
-    "body": [
-      "setTimeout(() => {",
-      "  ${2}",
-      "}, ${1:delayInms})",
-      ""
-    ],
+    "body": ["setTimeout(() => {", "  ${2}", "}, ${1:delayInms})", ""],
     "description": "Executes the given function after the specified delay in ES7 syntax"
   },
   "Promise": {
     "prefix": "prom",
-    "body": [
-      "return new Promise((resolve, reject) => {",
-      "  ${1}",
-      "})",
-      ""
-    ],
+    "body": ["return new Promise((resolve, reject) => {", "  ${1}", "})", ""],
     "description": "Creates and returns a new Promise in the standard ES7 syntax"
   },
   "Console Assert": {
@@ -216,11 +164,7 @@
   },
   "Comment Block": {
     "prefix": "cm",
-    "body": [
-      "/**",
-      " * ${1}",
-      " */"
-    ]
+    "body": ["/**", " * ${1}", " */"]
   },
   "Comment Big Block": {
     "prefix": "cmmb",
