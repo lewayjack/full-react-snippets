@@ -4,13 +4,13 @@
   "description": "Code snippets for React/React Native and extra libs",
   "version": "1.0.0",
   "icon": "images/logo.png",
-  "publisher": "leway@live.cn",
+  "publisher": "leway",
   "repository": {
     "type": "git",
-    "url": "https://github.com/walteribeiro/full-react-snippets"
+    "url": "https://github.com/lewayjack/full-react-snippets"
   },
   "bugs": {
-    "url": "https://github.com/walteribeiro/full-react-snippets/issues"
+    "url": "https://github.com/lewayjack/full-react-snippets/issues"
   },
   "engines": {
     "vscode": "^1.12.0"
