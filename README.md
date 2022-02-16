@@ -17,13 +17,12 @@
   - [Redux](#redux)
   - [React Router](#react-router)
   - [Testing](#testing)
-  - [Hooks](#hooks)  
-  - [Reactotron](#reactotron)  
-  - [Styled Components](#styled-components)  
-  - [Others](#others)  
+  - [Hooks](#hooks)
+  - [Reactotron](#reactotron)
+  - [Styled Components](#styled-components)
+  - [Others](#others)
 - [License](#license)
 - [Contact](#contact)
-
 
 ## Usage
 
@@ -166,12 +165,12 @@ After install this snippets add this inside your settings
 |    cdupa | Component Did Update (Arrow func)                              |
 |     cwun | Component Will Unmount                                         |
 |    cwuna | Component Will Unmount (Arrow func)                            |
-|      cwm | Component Will Mount ***[Deprecated]***                        |
-|     cwma | Component Will Mount (Arrow func) - ***[Deprecated]***         |
-|      cwr | Component Will Receive Props ***[Deprecated]***                |
-|     cwra | Component Will Receive Props (Arrow func) - ***[Deprecated]*** |
-|     cwup | Component Will Update ***[Deprecated]***                       |
-|    cwupa | Component Will Update (Arrow func) - ***[Deprecated]***        |
+|      cwm | Component Will Mount **_[Deprecated]_**                        |
+|     cwma | Component Will Mount (Arrow func) - **_[Deprecated]_**         |
+|      cwr | Component Will Receive Props **_[Deprecated]_**                |
+|     cwra | Component Will Receive Props (Arrow func) - **_[Deprecated]_** |
+|     cwup | Component Will Update **_[Deprecated]_**                       |
+|    cwupa | Component Will Update (Arrow func) - **_[Deprecated]_**        |
 |      ren | Component Render                                               |
 |      sst | Component Set State Object                                     |
 |      ssf | Component Set State Func                                       |
@@ -180,17 +179,19 @@ After install this snippets add this inside your settings
 
 ### Redux
 
-|  Snippets | Content                     |
-| --------: | --------------------------- |
-|     redux | Import Redux Statement      |
-|       rpf | Redux Pure Function         |
-|       rpc | Redux Pure Function Const   |
-|   rcredux | React Class Compoment Redux |
-|  reduxmap | Mapping To Props            |
-|  rxaction | Redux Action                |
-|   rxconst | Redux Const                 |
-| rxreducer | Redux Reducer               |
-|  rxselect | Redux Selector              |
+|    Snippets | Content                     |
+| ----------: | --------------------------- |
+|       redux | Import Redux Statement      |
+|         rpf | Redux Pure Function         |
+|         rpc | Redux Pure Function Const   |
+|     rcredux | React Class Compoment Redux |
+|    reduxmap | Mapping To Props            |
+|    rxaction | Redux Action                |
+|     rxconst | Redux Const                 |
+|   rxreducer | Redux Reducer               |
+| useDispatch | Redux useDispatch           |
+| useSelector | Redux useSelector           |
+|   rxdaction | Redux Dispatch Action       |
 
 ### React Router
 
@@ -261,7 +262,6 @@ After install this snippets add this inside your settings
 |         duck | Duck **`New`**             |
 |       rsduck | Redux Sauce Duck **`New`** |
 |           cs | Create Store **`New`**     |
-
 
 ## License
 
