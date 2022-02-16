@@ -1,10 +1,10 @@
 {
-  "name": "full-react-snippets",
+  "name": "full-react-snippets-add",
   "displayName": "Fullstack React/React Native snippets",
   "description": "Code snippets for React/React Native and extra libs",
-  "version": "1.4.2",
+  "version": "1.0.0",
   "icon": "images/logo.png",
-  "publisher": "walter-ribeiro",
+  "publisher": "leway@live.cn",
   "repository": {
     "type": "git",
     "url": "https://github.com/walteribeiro/full-react-snippets"
