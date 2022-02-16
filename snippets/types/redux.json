@@ -137,6 +137,12 @@
 
   "Redux Dispatch Action": {
     "prefix": "rxdaction",
-    "body": ["({", "  type: ${1:type},", "  payload: ${2:payload}", "})", ""]
+    "body": [
+      "dispatch({",
+      "  type: ${1:type},",
+      "  payload: ${2:payload}",
+      "})",
+      ""
+    ]
   }
 }
