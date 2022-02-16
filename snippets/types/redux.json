@@ -116,5 +116,27 @@
       "export const ${1:selectorName} = state => state.${2:selector}",
       ""
     ]
+  },
+
+  "Redux useDispatch": {
+    "prefix": "useDispatch",
+    "body": [
+      "import { useDispatch } from 'react-redux'",
+      "",
+      "const dispatch = useDispatch()"
+    ],
+    "description": ["Returns a Dispatch from redux"]
+  },
+
+  "Redux useSelector": {
+    "prefix": "useSelector",
+    "body": [
+      "const _${2:selectorName} = useSelector(s => s.${1:selector}.${2:selectorName})"
+    ]
+  },
+
+  "Redux Dispatch Action": {
+    "prefix": "rxdaction",
+    "body": ["({", "  type: ${1:type},", "  payload: ${2:payload}", "})", ""]
   }
 }
