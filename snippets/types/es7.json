@@ -2,7 +2,7 @@
   "Eslint Disable Line": {
     "prefix": "edl",
     "body": "// eslint-disable-line",
-    "description": "Eslint Disable Line"
+    "description": "Eslint Disable Line "
   },
   "Import Statement": {
     "prefix": "imst",

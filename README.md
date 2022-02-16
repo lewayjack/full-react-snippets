@@ -9,7 +9,6 @@
 - [Usage](#usage)
 - [Snippets List](#snippets-list)
   - [ES7](#eS7)
-  - [GraphQL](#graphQL)
   - [PropTypes](#proptypes)
   - [HOC](#hOC)
   - [React Native](#react-native)
@@ -72,48 +71,6 @@ After install this snippets add this inside your settings
 |       cm | Comment Block           |
 |     cmmb | Comment Big Block       |
 |      cbl | Comment Big Line        |
-
-### GraphQL
-
-| Snippets | Content               |
-| -------: | --------------------- |
-|  graphql | GraphQL For Component |
-|   expgql | Export GraphQL        |
-
-### PropTypes
-
-| Snippets | Content                        |
-| -------: | ------------------------------ |
-|     impt | Import PropTypes               |
-|      pta | Prop Type Array                |
-|     ptar | Prop Type Array Required       |
-|      ptb | Prop Type Bool                 |
-|     ptbr | Prop Type Bool Required        |
-|      ptf | Prop Type Func                 |
-|     ptfr | Prop Type Func Required        |
-|      ptn | Prop Type Number               |
-|     ptnr | Prop Type Number Required      |
-|      pto | Prop Type Object               |
-|     ptor | Prop Type Object Required      |
-|      pts | Prop Type String               |
-|     ptsr | Prop Type String Required      |
-|     ptnd | Prop Type Node                 |
-|    ptndr | Prop Type Node Required        |
-|     ptel | Prop Type Element              |
-|    ptelr | Prop Type Element Required     |
-|      pti | Prop Type Instance Of          |
-|     ptir | Prop Type Instance Of Required |
-|      pte | Prop Type Enum                 |
-|     pter | Prop Type Enum Required        |
-|     ptet | Prop Type One Of Type          |
-|    ptetr | Prop Type One Of Type Required |
-|     ptao | Prop Type Array Of             |
-|    ptaor | Prop Type Array Of Required    |
-|     ptoo | Prop Type Object Of            |
-|    ptoor | Prop Type Object Of Required   |
-|     ptsh | Prop Type Shape                |
-|    ptshr | Prop Type Shape Required       |
-|   ptypes | Static Prop Types              |
 
 ### HOC
 
@@ -231,25 +188,8 @@ After install this snippets add this inside your settings
 |     useLayoutEffect | useLayoutEffect Hook     |
 |       useDebugValue | useDebugValue Hook       |
 
-### Reactotron
-
-|      Snippets | Content                                            |
-| ------------: | -------------------------------------------------- |
-|        tron-r | Reactotron Config React **`New`**                  |
-|  tron-redux-r | Reactotron Redux Config for React **`New`**        |
-|       tron-rn | Reactotron Config for React Native **`New`**       |
-| tron-redux-rn | Reactotron Redux Config for React Native **`New`** |
-|           ctl | Reactotron Console Log **`New`**                   |
-|           ctw | Reactotron Console Warn **`New`**                  |
-|           cte | Reactotron Console Error **`New`**                 |
-
-### Styled Components
-
-|  Snippets | Content                                           |
-| --------: | ------------------------------------------------- |
-|  styled-r | Styled Components File for React **`New`**        |
-| styled-rn | Styled Components File for React Native **`New`** |
-|       stc | Styled Component **`New`**                        |
+         |
+                   |
 
 ### Others
 

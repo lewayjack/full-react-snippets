@@ -136,7 +136,7 @@
   },
 
   "Redux Dispatch Action": {
-    "prefix": "rxdaction",
+    "prefix": "rdxdaction",
     "body": [
       "dispatch({",
       "  type: ${1:type},",

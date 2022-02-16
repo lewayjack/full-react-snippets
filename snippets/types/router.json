@@ -18,11 +18,7 @@
   },
   "React Router Router": {
     "prefix": "router",
-    "body": [
-      "<Router>",
-      "\t${0}",
-      "</Router>"
-    ]
+    "body": ["<Router>", "\t${0}", "</Router>"]
   },
   "React Router Route": {
     "prefix": "route",
