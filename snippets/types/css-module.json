@@ -2,24 +2,24 @@
   "Import Css Module Style": {
     "prefix": "imcm",
     "body": ["import styles from '${1:./}${2:index}.css';"],
-    "description": "Import Css Module Style"
+    "description": "引入本地css Module模块。Import Css Module Style"
   },
   "Import Less Module Style": {
     "prefix": "imlm",
     "body": ["import styles from '${1:./}${2:index}.less';"],
-    "description": "Import Less Module Style"
+    "description": "引入本地less Module模块。Import Less Module Style"
   },
   "Import Classnames ": {
     "prefix": "imcls",
     "body": ["import cls from 'classnames';"],
-    "description": "Import Less Module Style"
+    "description": "引入classnames模块。 Import Less Module Style"
   },
-  "Classnames Style Module": {
+  "Classnames Css Style Module": {
     "prefix": "clsm",
     "body": ["{ cls(styles.${1:item}) }"],
-    "description": "Import Less Module Style"
+    "description": "css module的JSX类。JSX classNames with css module"
   },
-  "Classnames Style Module With Condition": {
+  "Classnames Css Style Module With Condition": {
     "scope": "javascript,typescript,javascriptreact,typescriptreact,jsx-attr",
     "prefix": "clsmc",
     "body": [
@@ -27,6 +27,6 @@
       "  [styles.${1/(.*)/${1}/}Active]: ${2:index} === ${3:1}",
       "})}"
     ],
-    "description": "Import Less Module Style"
+    "description": "css module带有条件的JSX类。 JSX classNames with css module and condition"
   }
 }

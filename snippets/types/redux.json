@@ -3,30 +3,7 @@
     "prefix": "redux",
     "body": ["import { connect } from 'react-redux'", ""]
   },
-  "Redux Pure Function": {
-    "prefix": "rpf",
-    "body": [
-      "export const $1 = '$1'",
-      "",
-      "export function $2($3) {",
-      "\treturn {",
-      "\t\ttype: $1,",
-      "\t\t$3",
-      "\t}",
-      "}"
-    ]
-  },
-  "Redux Pure Function Const": {
-    "prefix": "rpc",
-    "body": [
-      "export const $1 = '$1'",
-      "",
-      "export const $2 = $3 => ({",
-      "\ttype: $1,",
-      "\t$3",
-      "})"
-    ]
-  },
+
   "React Class Compoment Redux": {
     "prefix": "rcredux",
     "body": [
@@ -108,15 +85,6 @@
       ""
     ]
   },
-  "Redux Selector": {
-    "prefix": "rxselect",
-    "body": [
-      "import { createSelector } from 'reselect'",
-      "",
-      "export const ${1:selectorName} = state => state.${2:selector}",
-      ""
-    ]
-  },
 
   "Redux useDispatch": {
     "prefix": "useDispatch",
@@ -125,14 +93,15 @@
       "",
       "const dispatch = useDispatch()"
     ],
-    "description": ["Returns a Dispatch from redux"]
+    "description": ["hooks获取dispatch。 Returns a Dispatch from redux"]
   },
 
   "Redux useSelector": {
     "prefix": "useSelector",
     "body": [
       "const _${2:selectorName} = useSelector(s => s.${1:selector}.${2:selectorName})"
-    ]
+    ],
+    "description": ["hooks获取store中的值。 Returns a Store value from redux"]
   },
 
   "Redux Dispatch Action": {
@@ -143,6 +112,7 @@
       "  payload: ${2:payload}",
       "})",
       ""
-    ]
+    ],
+    "description": ["执行dispatch函数。 Call redux dispatch function"]
   }
 }

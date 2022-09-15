@@ -25,7 +25,6 @@
     "Redux",
     "GraphQL",
     "React Hooks",
-    "Reactotron",
     "styled components"
   ],
   "contributes": {

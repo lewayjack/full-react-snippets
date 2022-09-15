@@ -3,7 +3,6 @@
     "prefix": "hocredux",
     "body": [
       "import React from 'react'",
-      "import PropTypes from 'prop-types'",
       "import { connect } from 'react-redux'",
       "",
       "export const mapStateToProps = state => ({",
@@ -17,9 +16,6 @@
       "export const ${1:hocComponentName} = (WrappedComponent) => {",
       "  const hocComponent = ({ ...props }) => <WrappedComponent {...props} />",
       "",
-      "  hocComponent.propTypes = {",
-      "  }",
-      "",
       "  return hocComponent",
       "}",
       "",
@@ -31,17 +27,14 @@
     "prefix": "hoc",
     "body": [
       "import React from 'react'",
-      "import PropTypes from 'prop-types'",
       "",
       "export default (WrappedComponent) => {",
       "  const hocComponent = ({ ...props }) => <WrappedComponent {...props} />",
       "",
-      "  hocComponent.propTypes = {",
-      "  }",
-      "",
       "  return hocComponent",
       "}",
       ""
-    ]
+    ],
+    "description": "高阶组件模板。 high order component template "
   }
 }

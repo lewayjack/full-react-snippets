@@ -122,81 +122,13 @@
     ],
     "description": "Creates a React Functional Component with ES7 module system"
   },
-  "React Functional Component With PropTypes": {
-    "prefix": "rfcp",
-    "body": [
-      "import React from 'react'",
-      "import PropTypes from 'prop-types'",
-      "",
-      "export default function ${1:componentName}() {",
-      "  return (",
-      "    <>",
-      "    $0",
-      "    </>",
-      "  );",
-      "}",
-      "",
-      "${1:componentName}.propTypes = {",
-      "",
-      "}",
-      ""
-    ],
-    "description": "Creates a React Functional Component with ES7 module system with PropTypes"
-  },
-  "React Class Export Component With PropTypes": {
-    "prefix": "rcep",
-    "body": [
-      "import React, { Component } from 'react'",
-      "import PropTypes from 'prop-types'",
-      "",
-      "class ${1:componentName} extends Component {",
-      "  static propTypes = {",
-      "",
-      "  }",
-      "",
-      "  render() {",
-      "    return (",
-      "      <>",
-      "        $0",
-      "      </>",
-      "    )",
-      "  }",
-      "}",
-      "",
-      "export default ${1:componentName}",
-      ""
-    ],
-    "description": "Creates a React component class with ES7 module system"
-  },
+
   "React Class Pure Component": {
     "prefix": "rpc",
     "body": [
       "import React, { PureComponent } from 'react'",
       "",
       "export default class ${1:componentName} extends PureComponent {",
-      "  render() {",
-      "    return (",
-      "      <>",
-      "        $0",
-      "      </>",
-      "    )",
-      "  }",
-      "}",
-      ""
-    ],
-    "description": "Creates a React component class with ES7 module system"
-  },
-  "React Class Pure Component With PropTypes": {
-    "prefix": "rpcp",
-    "body": [
-      "import React, { PureComponent } from 'react'",
-      "import PropTypes from 'prop-types'",
-      "",
-      "export default class ${1:componentName} extends PureComponent {",
-      "  static propTypes = {",
-      "",
-      "  }",
-      "",
       "  render() {",
       "    return (",
       "      <>",
@@ -246,13 +178,9 @@
     ],
     "description": "Adds a default constructor for it('', () => {}) the class that contains props as arguments"
   },
-  "Empty State": {
-    "prefix": "est",
-    "body": ["this.state = {", "  $1", "}", ""],
-    "description": "Creates empty state object. To be used in a constructor."
-  },
+
   "Get Derived State From Props": {
-    "prefix": "dsfp",
+    "prefix": "rcdsfp",
     "body": [
       "static getDerivedStateFromProps(props, state) {",
       "  $0",

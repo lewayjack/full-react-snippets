@@ -1,8 +1,8 @@
 {
   "Describe Block": {
-    "prefix": "desc",
+    "prefix": "describe",
     "body": ["describe('$1', () => {", "  $0", "})", ""],
-    "description": "Testing `describe` block"
+    "description": "测试describe模块。 Testing `describe` block"
   },
   "Test Block": {
     "prefix": "test",

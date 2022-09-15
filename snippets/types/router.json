@@ -2,30 +2,29 @@
   "React Router Import": {
     "prefix": "imrr",
     "body": [
-      "import {",
-      "\tBrowserRouter as Router,",
-      "\tRoute",
-      "} from 'react-router-dom'\n"
-    ]
+      "import { BrowserRouter as Router,Route} from 'react-router-dom'"
+    ],
+    "description": "引入react router。 import react-router"
   },
   "React Router NavLink Import": {
     "prefix": "imnl",
-    "body": "import { NavLink } from 'react-router-dom'\n"
+    "body": "import { NavLink } from 'react-router-dom'",
+    "description": "引入NavLink。 import NavLink"
   },
   "React Router With Router Import": {
     "prefix": "imwr",
-    "body": "import { withRouter } from 'react-router-dom'"
+    "body": "import { withRouter } from 'react-router-dom'",
+    "description": "引入withRouter。 import withRouter"
   },
-  "React Router Router": {
-    "prefix": "router",
-    "body": ["<Router>", "\t${0}", "</Router>"]
-  },
+
   "React Router Route": {
     "prefix": "route",
-    "body": "<Route path='${1:path}' component={${2:component}}/>\n"
+    "body": "<Route path='${1:path}' component={${2:component}}/>",
+    "description": "Route组件。Route Component"
   },
   "React Router NavLink": {
     "prefix": "navlink",
-    "body": "<NavLink to={${1:path}}>{$anchorText}</NavLink>\n"
+    "body": "<NavLink to={${1:path}}>{$anchorText}</NavLink>",
+    "description": "NavLink组件。NavLink Component"
   }
 }

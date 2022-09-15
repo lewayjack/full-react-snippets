@@ -1,6 +1,6 @@
 {
   "Axios API": {
-    "prefix": "api",
+    "prefix": "axios-init",
     "body": [
       "import axios from 'axios';",
       "",

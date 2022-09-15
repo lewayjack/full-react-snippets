@@ -2,7 +2,8 @@
   "useState": {
     "prefix": "useState",
     "body": [
-      "const [${1:state}, set${1/(.*)/${1:/capitalize}/}] = useState(${2:initialState})"
+      "const [${1:state}, set${1/(.*)/${1:/capitalize}/}] = useState(${2:null})",
+      "$0"
     ],
     "description": [
       "Returns a stateful value, and a function to update it.\n",
@@ -14,11 +15,11 @@
     "prefix": "useEffect",
     "body": [
       "useEffect(() => {",
-      "  ",
+      "  ${0}",
       "  return () => {",
-      "    ${2}",
+      "    ",
       "  };",
-      "}, [${1:input}])"
+      "}, [${1}])"
     ],
     "description": [
       "Accepts a function that contains imperative, possibly effectful code.\n",
@@ -38,7 +39,28 @@
   "useReducer": {
     "prefix": "useReducer",
     "body": [
-      "const [state, dispatch] = useReducer(${1:reducer}, ${2:initialState}, ${3:init})"
+      "function ${1:state}Reducer(state, action) {",
+      "  return ${3:{...state, ...action}}",
+      "}",
+      "const [${1:state}, ${1}Dispatch] = useReducer(${1:state}Reducer, ${2:initialState})",
+      "$0"
+    ],
+    "description": [
+      "An alternative to useState. Accepts a reducer of type (state, action) => newState, and returns the current state paired with a dispatch method. (If you’re familiar with Redux, you already know how this works.)\n",
+      "useReducer is usually preferable to useState when you have complex state logic that involves multiple sub-values or when the next state depends on the previous one. useReducer also lets you optimize performance for components that trigger deep updates because you can pass dispatch down instead of callbacks."
+    ]
+  },
+  "useReducerLazy": {
+    "prefix": "useReducerLazy",
+    "body": [
+      "function ${1:state}Reducer(state, action) {",
+      "  return ${3:{...state, ...action}}",
+      "}",
+      "function ${1:state}LazyInit(${2}) {",
+      "   return ${2}",
+      "}",
+      "const [${1:state}, ${1}Dispatch] = useReducer(${1:state}Reducer, ${2:initialState}, ${1:state}LazyInit)",
+      "$0"
     ],
     "description": [
       "An alternative to useState. Accepts a reducer of type (state, action) => newState, and returns the current state paired with a dispatch method. (If you’re familiar with Redux, you already know how this works.)\n",
@@ -48,12 +70,12 @@
   "useCallback": {
     "prefix": "useCallback",
     "body": [
-      "const memoizedCallback = useCallback(",
+      "const _${1/(.*)/${1:/capitalize}/} = useCallback(",
       "  () => {",
-      "    ${1:callback}",
-      "  },",
-      "  [${2:input}],",
-      ")"
+      "    ${2}",
+      "  }, [${3}]",
+      ")",
+      "$0"
     ],
     "description": [
       "Returns a memoized callback.\n",
@@ -62,7 +84,12 @@
   },
   "useMemo": {
     "prefix": "useMemo",
-    "body": ["const memoizedValue = useMemo(() => ${1:function}, ${2:input})"],
+    "body": [
+      "const _${1/(.*)/${1:/capitalize}/}= useMemo(() => {",
+      "  return ${2}",
+      "}, [${3}])",
+      "$0"
+    ],
     "description": [
       "Returns a memoized value.\n",
       "Pass a “create” function and an array of dependencies. useMemo will only recompute the memoized value when one of the dependencies has changed. This optimization helps to avoid expensive calculations on every render.\n",
@@ -72,7 +99,7 @@
   },
   "useRef": {
     "prefix": "useRef",
-    "body": ["const ${1:ref} = useRef(${2:initialValue})"],
+    "body": ["const ${1}Ref = useRef(${2:null})"],
     "description": "useRef returns a mutable ref object whose .current property is initialized to the passed argument (initialValue). The returned object will persist for the full lifetime of the component."
   },
   "useImperativeHandle": {
@@ -92,11 +119,11 @@
     "prefix": "useLayoutEffect",
     "body": [
       "useLayoutEffect(() => {",
+      "   ${0}",
       "  return () => {",
-      "    ${1:effect}",
-      "  },",
-      "  [${2:input}]",
-      "})"
+      "    ",
+      "  };",
+      "}, [${1}])"
     ],
     "description": [
       "The signature is identical to useEffect, but it fires synchronously after all DOM mutations.\n",
