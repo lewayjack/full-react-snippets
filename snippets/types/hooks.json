@@ -28,14 +28,7 @@
       "By default, effects run after every completed render, but you can choose to fire it only when certain values have changed."
     ]
   },
-  "useContext": {
-    "prefix": "useContext",
-    "body": ["const ${1:context} = useContext(${2:contextValue})"],
-    "description": [
-      "Accepts a context object (the value returned from React.createContext) and returns the current context value for that context. The current context value is determined by the value prop of the nearest <MyContext.Provider> above the calling component in the tree.\n",
-      "When the nearest <MyContext.Provider> above the component updates, this Hook will trigger a rerender with the latest context value passed to that MyContext provider."
-    ]
-  },
+
   "useReducer": {
     "prefix": "useReducer",
     "body": [
@@ -56,8 +49,8 @@
       "function ${1:state}Reducer(state, action) {",
       "  return ${3:{...state, ...action}}",
       "}",
-      "function ${1:state}LazyInit(${2}) {",
-      "   return ${2}",
+      "function ${1:state}LazyInit(initialState) {",
+      "   return initialState",
       "}",
       "const [${1:state}, ${1}Dispatch] = useReducer(${1:state}Reducer, ${2:initialState}, ${1:state}LazyInit)",
       "$0"
@@ -134,5 +127,25 @@
     "prefix": "useDebugValue",
     "body": ["useDebugValue(${1:value})"],
     "description": "Can be used to display a label for custom hooks in React DevTools."
+  },
+  "useContextLikeState": {
+    "prefix": "useContext",
+    "body": [
+      "const [${1:state}, set${1/(.*)/${1:/capitalize}/}] = useContext(${2:context})"
+    ],
+    "description": ["useState风格消费Context"]
+  },
+  "createContextLikeState": {
+    "prefix": "createContext",
+    "body": [
+      "export const ${1/(.*)/${1:/capitalize}/}Context = React.createContext()",
+      "export function ${1/(.*)/${1:/capitalize}/}Provider(props) {",
+      "const value = React.useState(null)",
+      "return <${1/(.*)/${1:/capitalize}/}Context.Provider value={value} {...props} />",
+      "}",
+      "${0}"
+    ],
+
+    "description": ["useState风格创建Context"]
   }
 }
